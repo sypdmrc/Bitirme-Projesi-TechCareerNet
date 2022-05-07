@@ -1,0 +1,1611 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Bitirme Projesi</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+    <!-- external css -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo&family=Hind+Siliguri:wght@300&family=Hind:wght@300&family=Indie+Flower&family=Square+Peg&display=swap"
+        rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- alertify -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/themes/bootstrap.min.css">
+
+
+
+
+</head>
+
+<body>
+
+    <!-- Navbar start -->
+
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-inverse navbar-light bg-light fixed-top">
+        <div class="container">
+
+            <a id="logo" class="navbar-brand" href="">
+                <i class="fa fa-th mt-md-2" aria-hidden="true"></i>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+
+                <div class="mx-auto navbar-left">
+
+                    <ul id="navLinks" class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a id="productsLink" class="nav-link" href="">Products</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a id="trendProductsLink" class="nav-link" href="">Trend Products</a>
+                        </li>
+
+                        <li class="nav-item toDo" data-bs-toggle="modal" data-bs-target="#toDoListId">
+                            <a class="nav-link">To-Do Lıst</a>
+                        </li>
+
+
+                </div>
+
+                <div id="navbar-right">
+
+
+                    <ul class="navbar-nav mt-2 mt-lg-0 ml-auto ">
+
+                        <li class="nav-item clockIcon" data-bs-toggle="modal" data-bs-target="#clockId">
+
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+
+
+                            </a>
+
+                        </li>
+
+                        <li id="shoppingCart" class="nav-item">
+
+                            <a class="nav-link" href="#" id="cart">
+                                <i style="font-size:large;" class="fa fa-shopping-cart"></i>
+                                Shop<span class="badge text-center sepetValue">0</span>
+
+                            </a>
+
+
+                            <!-- shopping-cart start -->
+
+                            <div class="div-shopping-cart">
+                                <div class="shopping-cart" style="display: none">
+                                    <div class="shopping-cart-header">
+                                        <h6>Products in basket</h6>
+                                        <hr>
+                                        <ul>
+                                            <li>Quantity</li>
+                                            <li>Product</li>
+
+                                        </ul>
+                                        <div class="shopping-cart-total">
+                                            <span>Total:</span>
+                                            $
+                                            <span class="main-color-text total-price">0</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="shopping-cart-body">
+
+
+                                        <ul class="list-group shopping-cart-items">
+
+
+
+                                        </ul>
+
+                                        <div class="shopping-cart-footer">
+
+
+
+                                            <button type="button" class="backToShop">
+                                                <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                                                Back To Shop
+                                            </button>
+
+                                            <button type="button" class="clearBasket">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                                Clear the basket
+                                            </button>
+
+                                            <button type="button" class="finishOrder">
+                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                Continue
+                                            </button>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <!--shopping-cart end -->
+                        </li>
+
+
+
+                        <li id="userDropdown" class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i style="font-size:large;" class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                User
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+
+                                <a id="registerLink" class="dropdown-item" data-bs-toggle="modal"
+                                    data-bs-target="#register" href="#">
+                                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                    <span class="ms-1">Sign up</span>
+                                </a>
+
+                                <a id="loginLink" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#login"
+                                    href="#">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                    <span class="ms-2">Sign ın</span>
+
+                                </a>
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar end -->
+
+
+
+
+    <!-- To-do list modal-start -->
+
+
+    <div class="modal fade" id="toDoListId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="headerTask">To Do List</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-header">
+                            New Task
+                        </div>
+                        <div class="card-body">
+                            <form id="addTaskForm">
+                                <div class="input-group mb-3">
+                                    <input id="txtTaskName" name="taskName" type="text" class="form-control"
+                                        placeholder="Type a new task" aria-describedby="btnAddNewTask">
+                                    <div class="input-group-append">
+                                        <button class="btn" type="submit" id="btnAddNewTask">
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div id="withinAbtn">
+
+                                <div class="box">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    <input type="Search" placeholder="Search" id="searchInput">
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+
+                                    <div class="card mt-3">
+                                        <div class="card-header">
+                                            Task List
+                                            <a id="btnDeleteAll" href="#" class="btn btn-danger btn-sm delete-all">
+                                                Delete All
+                                            </a>
+                                        </div>
+
+                                        <ul id="task-list" class="list-group">
+
+                                        </ul>
+
+
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="card mt-3">
+                                        <div id="searchedList" class="card-header">
+                                            Searched List
+
+
+                                        </div>
+
+                                        <ul id="searched-list" class="list-group">
+
+                                        </ul>
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- To-do list modal-end -->
+
+
+
+
+    <!-- Clock modal start -->
+
+
+    <div class="modal fade" id="clockId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-uppercase">Saat</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="clockBody" class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary text-uppercase"
+                        data-bs-dismiss="modal">Kapat</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Clock modal end -->
+
+
+    <!-- Modal Register Start -->
+
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div id="registerTitle" class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">SIGN UP</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+
+
+                    <div class="form-group">
+
+                        <form id="formRegister">
+
+                            <div class="fc">
+                                <label for="registerfullName">Fullname</label>
+                                <input id="registerfullName" type="text" name="registerfullName" placeholder="Fullname">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                <small>Error Message</small>
+                            </div>
+
+
+                            <div class="fc">
+                                <label for="registerEmail">Email</label>
+                                <input id="registerEmail" type="text" name="registerEmail" placeholder="Email">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                <small>Error Message</small>
+                            </div>
+
+                            <div class="fc">
+                                <label for="registerPassword">Password</label>
+                                <input id="registerPassword" type="password" name="registerPassword"
+                                    placeholder="Password">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                <small>Error Message</small>
+                            </div>
+
+                            <div class="fc">
+                                <label for="registerRePassword">Repassword</label>
+                                <input id="registerRePassword" type="password" name="registerRePassword"
+                                    placeholder="Repassword">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                <small>Error Message</small>
+                            </div>
+
+                            <button type="submit" id="registerBtn" class="text-uppercase">submıt</button>
+                            <button type="reset" id="resetBtn" class="text-uppercase">clear</button>
+
+                        </form>
+
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Register End -->
+
+    <!-- Modal Login Start -->
+
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+
+                <div id="loginTitle" class="modal-header">
+                    <h5 class="modal-title"> SIGN IN</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+
+                <div class="modal-body">
+
+
+                    <div class="form-group">
+
+                        <form id="formLogin">
+
+                            <div class="fc">
+                                <label for="loginEmail">Email</label>
+                                <input id="loginEmail" type="text" name="loginEmail" placeholder="Email">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                <small>Error Message</small>
+                            </div>
+
+                            <div class="fc">
+                                <label for="loginPassword">Password</label>
+                                <input id="loginPassword" type="password" name="loginPassword" placeholder="Password">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                <small>Error Message</small>
+                            </div>
+
+                            <button id="loginBtn" type="submit" class="text-uppercase">sign in</button>
+
+                        </form>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Login End -->
+
+    <!-- header start -->
+
+    <header id="header">
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-color: rgb(255, 255, 255);">
+                    <div class="container">
+                        <div class="row  row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-2 row-cols-lg-2 g-3">
+                            <div class="col">
+
+                                <div class="fpDiv text-capitalize">
+                                    <div class="welcome-hero-txt">
+                                        <h4><span class="fp-name">Featured Products</span></h4>
+                                        <h3 class="text-uppercase featuredProductName">MSI Notebook</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur
+                                            adipisicing elit, sed do eiuiana smod
+                                            tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                                        <div class="packages-price">
+                                            <p style="color:green;"><span class="featuredProductPrice">$
+                                                    999.00</span><del>$ 1200.00</del></p>
+                                        </div>
+                                        <button class="btn-cart welcome-add-cart ">
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                            add to cart
+                                        </button>
+                                        <button class="welcome-add-cart welcome-more-info">more ınfo</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-right">
+                                <div class="fpDiv">
+                                    <div class="welcome-hero-img">
+                                        <img src="img/bilgisayar.jpg" width="500px" alt="website template image"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carousel-item" style="background-color: white;">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-7">
+
+                                <div class="fpDiv text-capitalize">
+                                    <div class="welcome-hero-txt">
+                                        <h4><span class="fp-name">Featured Products</span></h4>
+                                        <h2 class="text-uppercase featuredProductName">SAMSUNG S20</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                            sed do eiuiana smod
+                                            tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                                        <div class="packages-price">
+                                            <p style="color:green;"><span class="featuredProductPrice">$ 567.00</span>
+                                                <del>$ 800.00</del></p>
+                                        </div>
+                                        <button class="btn-cart welcome-add-cart ">
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                            add to cart
+                                        </button>
+                                        <button class="welcome-add-cart welcome-more-info">more ınfo</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="fpDiv">
+                                    <div class="welcome-hero-img"><img
+                                            src="https://productimages.hepsiburada.net/s/113/550/110000060955077.jpg/format:webp"
+                                            width="500px" alt="website template image"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" style="background-color: white;">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-7">
+
+                                <div class="fpDiv text-capitalize">
+                                    <div class="welcome-hero-txt">
+                                        <h4><span class="fp-name">Featured Products</span></h4>
+                                        <h2 class="text-uppercase featuredProductName">IPHONE 13 PRO</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                            sed do eiuiana smod
+                                            tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                                        <div class="packages-price">
+                                            <p style="color:green;"><span class="featuredProductPrice">$
+                                                    1200.00</span><del>$ 2000.00</del></p>
+                                        </div>
+                                        <button class="btn-cart welcome-add-cart "></span>
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                            add to cart
+                                        </button>
+                                        <button class="welcome-add-cart welcome-more-info">more ınfo</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="fpDiv">
+                                    <div class="welcome-hero-img"><img
+                                            src="https://productimages.hepsiburada.net/s/189/550/110000155170747.jpg/format:webp"
+                                            width="500px" alt="website template image"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="carousel-indicators">
+                    <button id="carouselBtn" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button id="carouselBtn" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button id="carouselBtn" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+            </div>
+    </header>
+
+    <!-- header end -->
+
+
+
+
+
+    <!-- products start -->
+    <section id="productsSection" class="container-fluid mt-3">
+        <div id="products" class="row">
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/bilgisayar.jpg" alt="">
+
+                    <div class="card-body">
+                        <h5 class="card-title">computers</h5>
+                        <button id="buyProduct">start shoppıng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/telefon.jpg" alt="">
+
+                    <div class="card-body">
+                        <h5 class="card-title">phones</h5>
+                        <button id="buyProduct">start shoppıng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/tablet.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">tablets</h5>
+                        <button id="buyProduct">start shoppıng</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- products end -->
+
+
+    <!-- main start -->
+
+    <main id="main">
+        <div class="album">
+            <div class="container">
+
+                <div class="cart-products">
+                    <div class="header">
+                        <h4>products</h4>
+                    </div>
+
+                    <div class="categories">
+                        <ul>
+                            <li><a href="">all</a></li>
+                            <li><a href="">computers</a></li>
+                            <li><a href="">phones</a></li>
+                            <li><a href="">tablets</a></li>
+
+                        </ul>
+                    </div>
+
+
+                    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-3 row-cols-lg-3 g-3">
+
+                        <div class="col">
+
+                            <div class="card">
+
+                                <img class="card-img-top"
+                                    src="https://productimages.hepsiburada.net/s/198/550/110000168765995.jpg/format:webp"
+                                    alt="">
+
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <button class="store-item-icon text-capitalize">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    add to cart
+
+                                </button>
+                                <div class="card-body">
+                                    <span class="card-title">HP Laptop</span>
+                                    <span class="cart-price">$1200</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col">
+
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://productimages.hepsiburada.net/s/73/550/110000014912740.jpg/format:webp"
+                                    alt="">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <button class="store-item-icon text-capitalize">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    add to cart
+
+                                </button>
+                                <div class="card-body">
+
+                                    <span class="card-title">Oppo Reno</span>
+                                    <span class="cart-price">$500</span>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col">
+
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://productimages.hepsiburada.net/s/103/550/110000046076365.jpg/format:webp"
+                                    alt="">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <button class="store-item-icon text-capitalize">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    add to cart
+
+                                </button>
+                                <div class="card-body">
+                                    <span class="card-title">Xiaomi Red</span>
+                                    <span class="cart-price">$600</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+                        <div class="col">
+
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://productimages.hepsiburada.net/s/108/550/110000052006361.jpg/format:webp"
+                                    width="" alt="">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <button class="store-item-icon text-capitalize">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    add to cart
+
+                                </button>
+                                <div class="card-body">
+                                    <span class="card-title">MONSTER Notebook</span>
+                                    <span class="cart-price">$1800</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col">
+
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://productimages.hepsiburada.net/s/131/550/110000082084676.jpg/format:webp"
+                                    alt="">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <button class="store-item-icon text-capitalize">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    add to cart
+
+                                </button>
+                                <div class="card-body">
+
+                                    <span class="card-title">HUAWEI Metpad</span>
+                                    <span class="cart-price">$800</span>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col">
+
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://productimages.hepsiburada.net/s/48/550/10941790814258.jpg/format:webp"
+                                    alt="">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <button class="store-item-icon text-capitalize">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    add to cart
+
+                                </button>
+                                <div class="card-body">
+                                    <span class="card-title">LENOVO M10</span>
+                                    <span class="cart-price">$750</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+                        <div class="col">
+
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://productimages.hepsiburada.net/s/92/550/110000034779073.jpg/format:webp"
+                                    width="">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <button class="store-item-icon text-capitalize">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    add to cart
+
+                                </button>
+                                <div class="card-body">
+                                    <span class="card-title">DELL Notebook</span>
+                                    <span class="cart-price">$1500</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col">
+
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://productimages.hepsiburada.net/s/105/550/110000049059730.jpg/format:webp"
+                                    alt="">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <button class="store-item-icon text-capitalize">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    add to cart
+
+                                </button>
+                                <div class="card-body">
+
+                                    <span class="card-title">ASUS Notebook</span>
+                                    <span class="cart-price">$800</span>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col">
+
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://productimages.hepsiburada.net/s/113/550/110000060955077.jpg/format:webp"
+                                    alt="">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <button class="store-item-icon text-capitalize">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    add to cart
+
+                                </button>
+                                <div class="card-body">
+                                    <span class="card-title">Samsung Galaxy S20</span>
+                                    <span class="cart-price">$567</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <!-- products end -->
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- main end -->
+
+
+
+    <!-- trending products start -->
+
+    <section id="trends" class="container">
+
+        <div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Trending <b>Products</b></h2>
+                    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="0">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                            <li id="carouseli" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active">
+                            </li>
+                            <li id="carouseli" data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                            <li id="carouseli" data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                        </ol>
+                        <!-- carousel items -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="img/bilgisayar.jpg" class="img-fluid carouselImg" alt="">
+                                            </div>
+                                            <div class="thumb-content">
+                                                <h4 class="carousel-name">MSI Notebook</h4>
+                                                <p class="carousel-item-price"><strike>$400.00</strike>
+                                                    <span class="carousel-price">$369.00</span>
+                                                </p>
+                                                <div class="star-rating">
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="btn btn-primary addToCart">Add To
+                                                    Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="https://www.sony.com.tr/image/5d02da5df552836db894cead8a68f5f3?fmt=pjpeg&wid=165&bgcolor=FFFFFF&bgc=FFFFFF"
+                                                    class="img-fluid carouselImg" alt="">
+                                            </div>
+                                            <div class="thumb-content">
+                                                <h4 class="carousel-name">Sony Headphone</h4>
+                                                <p class="carousel-item-price"><strike>$25.00</strike> <span
+                                                        class="carousel-price">$23.99</span>
+                                                </p>
+                                                <div class="star-rating">
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="btn btn-primary  addToCart">Add to
+                                                    Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=452&hei=420&fmt=jpeg&qlt=95&.v=1633027804000"
+                                                    class="img-fluid carouselImg" alt="">
+                                            </div>
+                                            <div class="thumb-content" id="3">
+                                                <h4 class="carousel-name">Macbook Air</h4>
+                                                <p class="carousel-item-price"><strike>$899.00</strike> <span
+                                                        class="carousel-price">$649.00</span>
+                                                </p>
+                                                <div class="star-rating">
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star-half-o"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="btn btn-primary  addToCart">Add To
+                                                    Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="https://productimages.hepsiburada.net/s/17/222-222/9779170345010.jpg/format:webp"
+                                                    class="img-fluid carouselImg" alt="">
+                                            </div>
+                                            <div class="thumb-content" id="4">
+                                                <h4 class="carousel-name">Nikon DSLR</h4>
+                                                <p class="carousel-item-price"><strike>$315.00</strike> <span
+                                                        class="carousel-price">$250.00</span>
+                                                </p>
+                                                <div class="star-rating">
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                        </li>
+                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="btn btn-primary  addToCart">Add To
+                                                    Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="https://productimages.hepsiburada.net/s/146/222-222/110000101090759.jpg/format:webp"
+                                                    class="img-fluid carouselImg" alt="">
+                                            </div>
+                                            <div class="thumb-content" id="5">
+                                                <h4 class="carousel-name">Sony PlayStation 5</h4>
+                                                <p class="carousel-item-price"><strike>$289.00</strike> <span
+                                                        class="carousel-price">$269.00</span>
+                                                </p>
+                                                <div class="star-rating">
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="btn btn-primary  addToCart">Add To
+                                                    Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="https://productimages.hepsiburada.net/s/49/550/10983951040562.jpg/format:webp"
+                                                    class="img-fluid carouselImg" alt="">
+                                            </div>
+                                            <div class="thumb-content" id="6">
+                                                <h4 class="carousel-name">Macbook Pro</h4>
+                                                <p class="carousel-item-price"><strike>$1099.00</strike> <span
+                                                        class="carousel-price">$869.00</span>
+                                                </p>
+                                                <div class="star-rating">
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star-half-o"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="btn btn-primary  addToCart">Add To
+                                                    Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="https://productimages.hepsiburada.net/s/31/222-222/10345257238578.jpg/format:webp"
+                                                    class="img-fluid carouselImg" alt="">
+                                            </div>
+                                            <div class="thumb-content" id="7">
+                                                <h4 class="carousel-name">Bose Speaker</h4>
+                                                <p class="carousel-item-price"><strike>$109.00</strike> <span
+                                                        class="carousel-price">$99.00</span>
+                                                </p>
+                                                <div class="star-rating">
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                        </li>
+                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="btn btn-primary  addToCart">Add To
+                                                    Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="https://productimages.hepsiburada.net/s/178/222-222/110000143040919.jpg/format:webp"
+                                                    class="img-fluid carouselImg" alt="">
+                                            </div>
+                                            <div class="thumb-content" id="8">
+                                                <h4 class="carousel-name">Samsung Galaxy S10</h4>
+                                                <p class="carousel-item-price"><strike>$599.00</strike> <span
+                                                        class="carousel-price">$569.00</span>
+                                                </p>
+                                                <div class="star-rating">
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="btn btn-primary addToCart">Add To
+                                                    Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="https://productimages.hepsiburada.net/s/189/550/110000155170747.jpg/format:webp"
+                                                    class="img-fluid carouselImg" alt="">
+                                            </div>
+                                            <div class="thumb-content" id="10">
+                                                <h4" class="carousel-name">Iphone 13 Pro</h4>
+                                                    <p class="carousel-item-price"><strike>$2000.00</strike> <span
+                                                            class="carousel-price">$1200.00</span>
+                                                    </p>
+                                                    <div class="star-rating">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <button type="button" class="btn btn-primary  addToCart">Add To
+                                                        Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="https://productimages.hepsiburada.net/s/18/550/9786082426930.jpg/format:webp"
+                                                    class="img-fluid carouselImg" alt="">
+                                            </div>
+                                            <div class="thumb-content" id="10">
+                                                <h4" class="carousel-name">Canon DSLR</h4>
+                                                    <p class="carousel-item-price"><strike>$315.00</strike> <span
+                                                            class="carousel-price">$250.00</span>
+                                                    </p>
+                                                    <div class="star-rating">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <button type="button" class="btn btn-primary  addToCart">Add To
+                                                        Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="https://productimages.hepsiburada.net/s/192/550/110000159171918.jpg/format:webp"
+                                                    class="img-fluid carouselImg" alt="">
+                                            </div>
+                                            <div class="thumb-content" id="11">
+                                                <h4" class="carousel-name">Google Pixel</h4>
+                                                    <p class="carousel-item-price"><strike>$450.00</strike> <span
+                                                            class="carousel-price">$418.00</span>
+                                                    </p>
+                                                    <div class="star-rating">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <button type="button" class="btn btn-primary addToCart">Add To
+                                                        Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="https://productimages.hepsiburada.net/s/140/550/110000093110257.jpg/format:webp"
+                                                    class="img-fluid carouselImg" alt="">
+                                            </div>
+                                            <div class="thumb-content" id="12">
+                                                <h4" class="carousel-name">Apple Watch</h4>
+                                                    <p class="carousel-item-price"><strike>$350.00</strike> <span
+                                                            class="carousel-price">$330.00</span>
+                                                    </p>
+                                                    <div class="star-rating">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                            <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <button type="button" class="btn btn-primary addToCart">Add To
+                                                        Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+                        <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- trending products end -->
+
+
+    <!-- footer start -->
+
+    <footer id="footerDiv" class="text-center text-lg-start " style="background-color: #f8f9fa">
+
+        <div class="container p-4 pb-0">
+
+            <section class="">
+
+                <div class="row">
+
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            About
+                        </h6>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, eaque unde ea rerum officia
+                            nobis quisquam libero facilis! Maxime velit nostrum, veritatis omnis perferendis expedita
+                            nisi optio error inventore sit?
+                        </p>
+                    </div>
+
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                        <p>
+                            <a href="">About</a>
+                        </p>
+                        <p>
+                            <a href="">Products</a>
+                        </p>
+                        <p>
+                            <a href="">Trends</a>
+                        </p>
+                        <p>
+                            <a href="">Contact</a>
+                        </p>
+                    </div>
+
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="">Your Account</a>
+                        </p>
+                        <p>
+                            <a href="">Become an Affiliate</a>
+                        </p>
+                        <p>
+                            <a href="">Shipping Rates</a>
+                        </p>
+                        <p>
+                            <a href="">Help</a>
+                        </p>
+                    </div>
+
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                        <p><i class="fa fa-home" aria-hidden="true"></i> Turkey</p>
+                        <p><i class="fa fa-envelope" aria-hidden="true"></i> info@gmail.com</p>
+                        <p><i class="fa fa-phone" aria-hidden="true"></i> + 246 642 15 48</p>
+                        <p><i class="fa fa-print" aria-hidden="true"></i> + 246 642 15 48</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <hr class="my-3">
+
+
+            <section class="p-3 pt-0">
+                <div class="row d-flex align-items-center">
+
+                    <div class="col-md-7 col-lg-8 text-center text-md-start">
+
+                        <div class="p-3">
+                            © 2022 Copyright Lorem, ipsum dolor.
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                        <a class="btn btn-outline-dark btn-floating m-1" class="" role="button"><i
+                                class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a class="btn btn-outline-dark btn-floating m-1" class="" role="button"><i class="fa fa-twitter"
+                                aria-hidden="true"></i></a>
+                        <a class="btn btn-outline-dark btn-floating m-1" class="" role="button"><i class="fa fa-google"
+                                aria-hidden="true"></i></a>
+                        <a class="btn btn-outline-dark btn-floating m-1" class="" role="button"><i
+                                class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a class="btn btn-outline-dark btn-floating m-1" class="" role="button"><i class="fa fa-github"
+                                aria-hidden="true"></i></a>
+                        <a class="btn btn-outline-dark btn-floating m-1" class="" role="button"><i
+                                class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+    </footer>
+
+    <!-- footer end -->
+
+
+    <!-- Up button  -->
+    <a id="button"></a>
+
+
+
+
+
+
+
+    <!-- Jquery ui  and js    -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js "></script>
+
+    <!-- All JS Scripts -->
+
+    <script src="./js/others.js"></script>
+    <script src="./js/shopping-cart.js" async></script>
+    <script src="./js/register-validation.js"></script>
+    <script src="./js/login-validation.js"></script>
+    <script src="./js/to-do.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/cart-products.js"></script>
+    <script src="./js/featured-products.js"></script>
+
+    <!-- Alertify JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js"></script>
+
+    <!-- Sweetalert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+</body>
+
+<!-- FIREBASE START -->
+
+<script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+    import { getDatabase,set,ref,update } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged,signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+  
+    const firebaseConfig = {
+    apiKey: "AIzaSyArNr1YOCpOJojGjWrGXCZ6TvDxHXJqOTg",
+    authDomain: "blog-project-ab7bf.firebaseapp.com",
+    databaseURL: "https://blog-project-ab7bf-default-rtdb.firebaseio.com",
+    projectId: "blog-project-ab7bf",
+    storageBucket: "blog-project-ab7bf.appspot.com",
+    messagingSenderId: "432621503923",
+    appId: "1:432621503923:web:a0d6a5c3feae67d03677c6",
+    measurementId: "G-J5ZM4KWRMM"
+  };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database=getDatabase(app);
+    const auth = getAuth();
+  
+    
+    
+// signUp start \\
+   
+
+registerBtn.addEventListener("click",(e)=>{
+
+    var registerElement=document.getElementById("registerfullName");
+    var emailElement = document.getElementById("registerEmail");
+    var passwordElement = document.getElementById("registerPassword");
+    var rePasswordElement = document.getElementById("registerRePassword");
+
+    var registerfullName = document.getElementById("registerfullName").value;
+    var email = document.getElementById("registerEmail").value;
+    var password = document.getElementById("registerPassword").value;
+    var rePassword = document.getElementById("registerRePassword").value;
+  
+    // const id=push(child(ref(database),'/users')).key;
+      
+    if(password.length>=6 && password==rePassword){
+  
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+
+        registerElement.value="";
+        emailElement.value="";
+        passwordElement.value="";
+        rePasswordElement.value="";
+
+    const user = userCredential.user; 
+
+    
+               
+    set(ref(database,'users/'+user.uid),{
+        name:registerfullName,
+        email:email,     
+    })
+            Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'User has been created !',
+        showConfirmButton: false,
+        timer: 1500
+        })
+
+       
+        
+    })
+    .catch((error) => {
+
+    const errorCode = error.code;
+    const errorMessage = error.message;   
+
+    if(errorCode=="auth/email-already-in-use"){
+        
+    Swal.fire("The email is already registered. Please use another e-mail address.")
+       
+    }
+  
+    });   
+           
+}
+  
+   
+});
+
+
+// signUp end \\
+
+
+// signIn start \\
+ 
+loginBtn.addEventListener("click", (e) => {
+
+    var emailLogin= document.getElementById("loginEmail");
+    var passwordLogin = document.getElementById("loginPassword");
+
+    var email = document.getElementById("loginEmail").value;
+    var password = document.getElementById("loginPassword").value;
+
+    
+    
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+
+    const user = userCredential.user; 
+   
+    const dt=new Date();
+         
+    update(ref(database,'users/'+user.uid),{
+        last_login:dt.toLocaleString(),
+     
+    })
+
+    emailLogin.value="";
+    passwordLogin.value="";
+    
+        Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'You Are Logged In',
+    showConfirmButton: false,
+    timer: 1500
+    })
+
+    var userDropdown=document.getElementById("userDropdown");
+var registerLink=document.getElementById("registerLink");
+
+var render="";
+
+render+=`
+
+<a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+aria-haspopup="true" aria-expanded="false">
+<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+Hesabım
+</a>
+
+<div class="dropdown-menu" aria-labelledby="dropdownId">
+
+<a class="dropdown-item text-center" href="#" onMouseOver="this.style.color='white',this.style.background='rgb(161, 161, 161)'" onMouseOut="this.style.color='black',this.style.background='white'">
+<span class="text-lowercase">${user.email}</span>
+
+</a>
+
+
+<a id="logOut" class="dropdown-item" href="index.html" onMouseOver="this.style.color='white',this.style.background='rgb(161, 161, 161)'" onMouseOut="this.style.color='black',this.style.background='white'">
+<i class="fa fa-sign-out" aria-hidden="true"></i>
+Çıkış Yap
+
+
+</a>
+</div>
+
+`;
+
+userDropdown.innerHTML=render;
+    
+    
+   
+    })
+
+    .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  if(errorCode=="auth/user-not-found" && password.length>=6){
+        Swal.fire({
+    icon: 'error',
+    text: 'User not found',
+   
+    })
+        
+  }
+  
+ if(errorCode=="auth/wrong-password"){
+    Swal.fire({
+    icon: 'error',
+    text: 'Wrong Password',
+    
+    })
+ }
+
+  
+  });
+
+
+   
+});
+   
+
+// signIn end \\
+
+  
+
+
+    
+</script>
+
+<!-- FIREBASE END -->
+
+
+</html>
